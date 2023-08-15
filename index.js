@@ -23,7 +23,6 @@ app.get("/orkes", async (req, res) => {
     }
   } catch (error) {
     res.send([]);
-    console.log(error);
   }
 });
 
