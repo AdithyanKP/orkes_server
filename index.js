@@ -1,12 +1,13 @@
 import express from "express";
 import axios from "axios";
 import cors from "cors";
+import dotenv from "dotenv";
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+dotenv.config(); // Load environment variables from .env file
 
-let baseUrl =
-  "https://englishapi.pinkvilla.com/app-api/v1/photo-gallery-feed-page/page";
-
+let baseUrl = process.env.BASEURL;
 // Use the cors middleware
 app.use(cors());
 
